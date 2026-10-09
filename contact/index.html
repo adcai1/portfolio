@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<nav>
-    <a href="../">Home</a>
-    <a href="../projects/">Projects</a>
-    <a href="../contact/">Contact</a>
-    <a href="../cv/">CV</a>
-    <a href="https://github.com/adcai1" target="_blank">GitHub</a>
-</nav>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | Andy Cai</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
-    <h1>Index</h1>
-    <form action="mailto:adcai@ucsd.edu" method="POST" enctype="text/plain">
-    <label>
-        Email:
-        <input name="email" type="email" value="example@email.com">
-    </label>
+    <nav>
+        <a href="../">Home</a>
+        <a href="../projects/">Projects</a>
+        <a href="./" class="current">Contact</a>
+        <a href="../cv/">CV</a>
+        <a href="https://github.com/adcai1"
+           target="_blank"
+           rel="noopener noreferrer">GitHub</a>
+    </nav>
 
-    <label>
-        Subject:
-        <input name="subject" value="Test message">
-    </label>
+    <main>
+        <h1>Contact Me</h1>
 
-    <label>
-        Message:
-        <textarea name="body">Hello! This is a test message.</textarea>
-    </label>
+        <p>
+            Have a question or want to get in touch?
+            Send me a message using the form below.
+        </p>
 
-    <button type="submit">Send</button>
-</form>
+        <form action="mailto:adcai@ucsd.edu"
+              method="post"
+              enctype="text/plain">
 
+            <label for="email">
+                Email:
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="yourname@example.com"
+                    required
+                >
+            </label>
+
+            <label for="subject">
+                Subject:
+                <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Enter a subject"
+                    required
+                >
+            </label>
+
+            <label for="message">
+                Message:
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message here..."
+                    required
+                ></textarea>
+            </label>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
 </body>
 </html>
