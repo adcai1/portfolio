@@ -22,7 +22,39 @@ function normalizePath(path) {
 }
 
 const nav = document.createElement('nav');
+const themeLabel = document.createElement('label');
+themeLabel.className = 'color-scheme';
+themeLabel.textContent = 'Theme:';
+
+const themeSelect = document.createElement('select');
+const options = [
+  { value: 'light dark', label: 'Automatic' },
+  { value: 'light', label: 'Light' },
+  { value: 'dark', label: 'Dark' },
+];
+
+for (const option of options) {
+  const optionElement = document.createElement('option');
+  optionElement.value = option.value;
+  optionElement.textContent = option.label;
+  themeSelect.append(optionElement);
+}
+
+themeLabel.append(themeSelect);
+document.body.prepend(themeLabel);
 document.body.prepend(nav);
+
+const savedColorScheme =
+  'colorScheme' in localStorage ? localStorage.colorScheme : 'light dark';
+
+document.documentElement.style.setProperty('color-scheme', savedColorScheme);
+themeSelect.value = savedColorScheme;
+
+themeSelect.addEventListener('input', (event) => {
+  const value = event.target.value;
+  document.documentElement.style.setProperty('color-scheme', value);
+  localStorage.colorScheme = value;
+});
 
 for (const page of pages) {
   let url = page.url;

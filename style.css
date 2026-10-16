@@ -2,9 +2,10 @@
 
 :root {
     --color-accent: oklch(65% 50% 0);
-    --color-border: oklch(80% 3% 200);
-    --color-background: oklch(98% 2% 250);
-    --color-text: oklch(25% 3% 250);
+    --color-border: oklch(50% 10% 200 / 40%);
+    --color-background: canvas;
+    --color-text: canvastext;
+    color-scheme: light dark;
 }
 
 * {
@@ -18,9 +19,12 @@ html {
 }
 
 body {
+    position: relative;
     max-width: 100ch;
     margin-inline: auto;
     padding: 1em;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 h1,
@@ -44,9 +48,10 @@ img {
 
 
 nav {
+    --border-color: oklch(50% 10% 200 / 40%);
     display: flex;
     margin-bottom: 2em;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -60,12 +65,27 @@ nav a {
 
 nav a:hover {
     border-bottom-color: var(--color-accent);
-    background-color: oklch(from var(--color-accent) 95% 5% h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 nav a.current {
-    border-bottom-color: var(--color-border);
+    border-bottom-color: var(--border-color);
     padding-bottom: calc(0.5em - 0.4em);
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 80%;
+    z-index: 10;
+}
+
+.color-scheme select {
+    font: inherit;
 }
 
 
