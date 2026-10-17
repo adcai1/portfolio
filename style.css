@@ -22,7 +22,7 @@ body {
     position: relative;
     max-width: 100ch;
     margin-inline: auto;
-    padding: 1em;
+    padding: 3.5rem 1em 1em;
     background-color: var(--color-background);
     color: var(--color-text);
 }
