@@ -147,9 +147,8 @@ button:hover {
 }
 
 .projects article {
-    display: grid;
-    grid-row: span 3;
-    grid-template-rows: subgrid;
+    display: flex;
+    flex-direction: column;
     gap: 1em;
     margin: 0;
     padding: 1em;
@@ -173,18 +172,25 @@ button:hover {
 }
 
 .projects .meta {
-    margin-bottom: 1em;
+    margin: 0;
     color: color-mix(in oklch, var(--color-text), transparent 20%);
 }
 
-.projects p + p {
-    margin-top: 1em;
+.projects .project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.projects .project-body p {
+    margin: 0;
 }
 
 .projects a {
     color: var(--color-accent);
     font-weight: 600;
     text-decoration: none;
+    display: inline-block;
 }
 
 .projects a:hover {

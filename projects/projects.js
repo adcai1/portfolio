@@ -28,7 +28,9 @@ export function renderProjects(projects, container) {
     meta.className = 'meta';
     meta.textContent = `${project.category || 'Project'} • ${project.year || '2024'}`;
 
-    article.append(heading, image, meta, description);
+    const projectBody = document.createElement('div');
+    projectBody.className = 'project-body';
+    projectBody.append(description);
 
     if (project.link && project.link !== '#') {
       const link = document.createElement('a');
@@ -36,9 +38,10 @@ export function renderProjects(projects, container) {
       link.textContent = 'View project';
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
-      article.append(link);
+      projectBody.append(link);
     }
 
+    article.append(heading, image, meta, projectBody);
     container.append(article);
   }
 }
