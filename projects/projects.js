@@ -48,6 +48,7 @@ export function renderProjects(projects, container) {
 
 async function loadProjects(url = './projects.json') {
   const container = document.querySelector('#projects');
+  const title = document.querySelector('.projects-title');
 
   if (!container) {
     return;
@@ -61,9 +62,17 @@ async function loadProjects(url = './projects.json') {
     }
 
     const projects = await response.json();
+
+    if (title) {
+      title.textContent = `Projects (${projects.length})`;
+    }
+
     renderProjects(projects, container);
   } catch (error) {
     console.error(error);
+    if (title) {
+      title.textContent = 'Projects (0)';
+    }
     container.innerHTML = '<p>Unable to load project data right now.</p>';
   }
 }
