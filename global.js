@@ -1,3 +1,13 @@
+export async function fetchGitHubData(username) {
+  const response = await fetch(`https://api.github.com/users/${username}`);
+
+  if (!response.ok) {
+    throw new Error(`GitHub request failed: ${response.status}`);
+  }
+
+  return response.json();
+}
+
 const pages = [
   { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },

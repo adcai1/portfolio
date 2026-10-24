@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Spotify-Music-Track-Popularity-Analysis",
+    "category": "Data Analysis",
+    "year": 2026,
+    "description": "An analysis of Spotify track popularity based on audio features and artist size.",
+    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAb1BMVEUAAAAe12Af22If3mMg4mUbv1UZsU8Ujj8e1F8dzVwd0F0JQh4auFIFIxAYqkwMVSYcyFkVlEIOYiwWm0UThzwIOBkEGwwMWigLUSQCEQcQcjMSgDkReDUFJxEFIA4DFgoPazAXo0kGLRQBCAQKSyGY8H41AAAEkUlEQVR4nO2aa5eCIBBAcwCf5OKrh1mp9f9/42KloVmrHXC/zN1z9tFqXUcYYHC1QhAEQRAEQRAEQRAEQRAEQZCvOO3iPI2iNI939X+7NBzj1LaASghpvoPFnfh/za6VsAiApQBALBH+/JdRffAo6Qk9xaifZv/hVAgYNWq9PGe/tFLu0w9KN4h1WFTrGP5ldI+WHSznVMooTAKgWMrJsabE6WGVXJZQ2ld0qlID4UfzTmd7cpgewWJr804Tm5MSK2Y6w0/qdi+xMpsanFntqYtVZdIp/yJOt1il5pyyTwPL51jtTDld5nY8JVTGuuBhdsdTQhWZcdoPEzlIiELz91sraiYvRET1IZT4goVJ5DyIqpAJV748bkZCE06B3xnJuSWP4mt9OveOuGxO9bWMbOaOhcw1MRvtAkV4uv04np2vRcLocL4FJkLVXjwcphx9zlLu9uNloFXldPYF7xxPDRfRn0H5rEA9OMfsGS1gG81OgWd9ISUbf8m64VJ7Uy/aCwb+uN51sCudKuRCyLYjGONVlZa74DicEVwK93EucTRLVV2SIpW0CtKK+W3GtJQ86rPQKQdeOWnvn2apLknJ97aYeJ+8Gzlg6U4Z606sPVav02awNB8Xeh5AgUfdErkbyOlVq9T27eQOHry8TsDe3u9jLVqpXKtU/ioFTZnF8oRs44wJ4blN4aUnJxejt/6WdGOB3qlCRAZC4LEq3WVKk77UQZHYTRVGPS4sC96dC7ZWqf70jvhJHIxmwku9LWyLPi9BtvvnqSal/rwLu8Qb7QvAjUmB9/eaN8vZSFXGpJR9/vsEmV/Dl5LDMpEK8tRJkjBMkigtguEA88MH0TIoZRE72Ndxyv0mCdxGmtsPSl2e5L0OEHtgUKrqv7nHBYzNxaEZ/BylUvbTP09v70sHq6sPA41cUoi082K9bKp3RlzOqiEA8cLHyCdUKap37hm8kQK41/RpO4dpIVA1WnnvaBprlVqN2Mgvwe3EKRrSyuZeb+wD34kTt3cS0VxbZ/0WS0TovOaAeuvY3nNYIXTQEn29TitHfX/w4vpNHWyfxfa7bqB9kRz3AvW5EH058NHtEdA7nVImajfK7vP3m9N6fVyvT2c1dBt1afW8e3onnqtBeSOUo9/xKls3Zy694zM7Kran7vicvYx8+tft115S4Intub158O13V4Rlu2KohyU23QmhoZ+bx/fUmiWDnADeT4gH/9Hd9xrKibVFIBa/aZWD100UYzd8otVtar5bBYPUJoyU8uIZ4x+4zO9fAzW0nzU9VI3W4E/PjNPq6o9//iQMdL07h682QRpoYsppuPybDjCDW5GZ+MoKXO0DjMp1+k6tKlWadJqeQntO8yqS31jNjpXJfbWWfKaV+Tg1bL0ZVuCWSzjJpQ2bnK+IMLb7OOQSTbuFANWkWogmYn9CsOhSt67jMF4XU8Lk667lTyCLrPdPKwGFZMEnglQK7o5Ni4G47LBkYxrwc2AWfZYRms0QCsLZLvIo0GcxmzPhSQTjdrpd/Km3d2yyQJIZf/4HQRAEQRAEQRAEQRAEQRAE0cIv4Ss238lD7vkAAAAASUVORK5CYII=",
+    "alt": "Placeholder for Project 1",
+    "link": "https://github.com/adcai1/Spotify-Music-Track-Popularity-Analysis"
+  },
+  {
+    "title": "Project 2",
+    "category": "Category 2",
+    "year": 2024,
+    "description": "This project focuses on an idea, a process, and a way to communicate it clearly.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 2",
+    "link": "#"
+  },
+  {
+    "title": "Project 3",
+    "category": "Category 3",
+    "year": 2023,
+    "description": "This work demonstrates a thoughtful approach to presenting information in a structured way.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 3",
+    "link": "#"
+  },
+  {
+    "title": "Project 4",
+    "category": "Category 4",
+    "year": 2023,
+    "description": "This project uses clear visual structure to communicate a concept and its main takeaway.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 4",
+    "link": "#"
+  },
+  {
+    "title": "Project 5",
+    "category": "Category 5",
+    "year": 2022,
+    "description": "This project highlights a design direction with a strong emphasis on readability and flow.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 5",
+    "link": "#"
+  },
+  {
+    "title": "Project 6",
+    "category": "Category 6",
+    "year": 2024,
+    "description": "This project presents an idea through organized content and a simple visual narrative.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 6",
+    "link": "#"
+  },
+  {
+    "title": "Project 7",
+    "category": "Category 7",
+    "year": 2023,
+    "description": "This project explores a concept with attention to clarity, balance, and presentation.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 7",
+    "link": "#"
+  },
+  {
+    "title": "Project 8",
+    "category": "Category 8",
+    "year": 2024,
+    "description": "This work reflects a small but effective design exercise focused on communication.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 8",
+    "link": "#"
+  },
+  {
+    "title": "Project 9",
+    "category": "Category 9",
+    "year": 2022,
+    "description": "This project tests how a simple visual approach can make an idea easier to understand.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 9",
+    "link": "#"
+  },
+  {
+    "title": "Project 10",
+    "category": "Category 10",
+    "year": 2023,
+    "description": "This project uses a minimal structure to emphasize the essential purpose of the idea.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 10",
+    "link": "#"
+  },
+  {
+    "title": "Project 11",
+    "category": "Category 11",
+    "year": 2024,
+    "description": "This project showcases a concept through a clear composition and thoughtful formatting.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 11",
+    "link": "#"
+  },
+  {
+    "title": "Project 12",
+    "category": "Category 12",
+    "year": 2022,
+    "description": "This project brings together a simple idea and a strong presentation to make the concept memorable.",
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "alt": "Placeholder for Project 12",
+    "link": "#"
+  }
+]
