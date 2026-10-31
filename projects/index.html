@@ -15,8 +15,25 @@
             Here are some projects and assignments I have worked on.
         </p>
 
+        <div class="chart-wrapper">
+            <svg id="projects-pie-plot" viewBox="-50 -50 100 100" aria-label="Projects by year" role="img"></svg>
+            <ul class="legend" aria-label="Project year legend"></ul>
+        </div>
+
+        <label class="search-label" for="project-search">
+            Search projects
+        </label>
+        <input
+            id="project-search"
+            class="searchBar"
+            type="search"
+            aria-label="Search projects"
+            placeholder="🔍 Search projects…"
+        >
+
         <div id="projects" class="projects" aria-live="polite"></div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script type="module" src="../global.js"></script>
     <script type="module" src="./projects.js"></script>
 </body>

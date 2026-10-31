@@ -140,6 +140,68 @@ button:hover {
 }
 
 
+.chart-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5em;
+    margin-block: 2em;
+}
+
+#projects-pie-plot {
+    width: min(18rem, 65vw);
+    height: auto;
+    max-width: 20rem;
+    margin: 0 auto;
+    overflow: visible;
+    flex-shrink: 0;
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+    gap: 0.75em 1em;
+    flex: 1;
+    min-width: min(100%, 15rem);
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+    border: 1px solid var(--color-border);
+    border-radius: 0.75em;
+    background: color-mix(in oklch, var(--color-accent), canvas 90%);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55em;
+    padding: 0.25em 0;
+}
+
+.legend-item .swatch {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 0.25rem;
+    background: var(--color);
+    flex-shrink: 0;
+}
+
+.legend-label {
+    line-height: 1.2;
+}
+
+.search-label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+.searchBar {
+    width: min(100%, 30rem);
+    margin-bottom: 1.5em;
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 15em), 1fr));
