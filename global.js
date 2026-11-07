@@ -11,6 +11,7 @@ export async function fetchGitHubData(username) {
 const pages = [
   { url: '', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
+  { url: 'meta/', title: 'Meta' },
   { url: 'contact/', title: 'Contact' },
   { url: 'cv/', title: 'CV' },
   { url: 'https://github.com/adcai1', title: 'GitHub', external: true },
