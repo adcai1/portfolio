@@ -145,6 +145,139 @@
         #language-breakdown {
             margin-top: 0.25rem;
         }
+
+        .time-filter {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-block: 1rem;
+        }
+
+        .time-filter input {
+            flex: 1;
+        }
+
+        #commit-time {
+            margin-left: auto;
+            white-space: nowrap;
+        }
+
+        #scrolly-1 {
+            position: relative;
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        #scrolly-1 > * {
+            flex: 1;
+            min-width: 0;
+        }
+
+        #scatter-story {
+            position: relative;
+        }
+
+        .step {
+            min-height: 38vh;
+            margin-bottom: 20vh;
+            padding: 1.25rem;
+            border: 1px solid var(--color-border);
+            border-radius: 0.75rem;
+            background: var(--meta-card);
+        }
+
+        .step:last-child {
+            margin-bottom: 10vh;
+        }
+
+        #scatter-plot {
+            position: sticky;
+            top: 1rem;
+            height: 72vh;
+            align-self: flex-start;
+        }
+
+        #chart {
+            min-height: 0;
+            height: calc(72vh - 4.5rem);
+        }
+
+        #chart svg {
+            height: 100%;
+        }
+
+        #files {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            margin-top: 2rem;
+        }
+
+        #files > div {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: subgrid;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        #files dt {
+            grid-column: 1;
+            padding-block: 0.6rem;
+        }
+
+        #files dt small {
+            display: block;
+            margin-top: 0.15rem;
+            color: color-mix(in oklch, var(--color-text), transparent 35%);
+        }
+
+        #files dd {
+            grid-column: 2;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
+            align-items: start;
+            gap: 0.15em;
+            margin: 0;
+            padding-top: 0.6em;
+        }
+
+        .loc {
+            width: 0.5em;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: var(--color);
+            transition: transform 180ms ease;
+        }
+
+        .loc:hover {
+            transform: scale(1.5);
+        }
+
+        .dot {
+            transition: cx 300ms ease, cy 300ms ease, r 300ms ease, fill-opacity 180ms ease;
+        }
+
+        .dot {
+            @starting-style {
+                r: 0;
+            }
+        }
+
+        @media (max-width: 50rem) {
+            #scrolly-1 {
+                display: block;
+            }
+
+            #scatter-story {
+                max-height: none;
+            }
+
+            #scatter-plot {
+                top: 0;
+                height: 55vh;
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -162,15 +295,31 @@
             <div id="stats" aria-live="polite"></div>
         </section>
 
-        <section aria-labelledby="chart-heading">
-            <h2 id="chart-heading">Commits by time of day</h2>
-            <div id="chart"></div>
-            <p id="selection-count">No commits selected</p>
-        </section>
+        <label class="time-filter" for="commit-progress">
+            <span>Show commits until:</span>
+            <input id="commit-progress" type="range" min="0" max="100" value="100">
+            <time id="commit-time"></time>
+        </label>
+
+        <div id="scrolly-1">
+            <div id="scatter-story" aria-label="Commit narrative"></div>
+            <div id="scatter-plot">
+                <section aria-labelledby="chart-heading">
+                    <h2 id="chart-heading">Commits by time of day</h2>
+                    <div id="chart"></div>
+                    <p id="selection-count">No commits selected</p>
+                </section>
+            </div>
+        </div>
 
         <section aria-labelledby="language-heading">
             <h2 id="language-heading">Selected languages</h2>
             <dl id="language-breakdown" class="stats" aria-live="polite"></dl>
+        </section>
+
+        <section aria-labelledby="files-heading">
+            <h2 id="files-heading">Lines by file</h2>
+            <dl id="files" aria-live="polite"></dl>
         </section>
     </main>
 
