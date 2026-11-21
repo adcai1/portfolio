@@ -36,7 +36,7 @@ function renderTooltipContent(commit) {
 }
 
 async function loadData() {
-  return d3.csv('./loc.csv', (row) => {
+  return d3.csv('./loc.csv?v=20261120', (row) => {
     const datetime = new Date(`${row.date}T${row.time}:00`);
     return {
       ...row,
@@ -236,18 +236,22 @@ function updateFileDisplay(visibleCommits) {
     .data(files, (d) => d.name)
     .join(
       (enter) => enter.append('div').call((div) => {
-        div.append('dt').append('code');
-        div.append('dt').append('small');
+        div.append('dt').call((dt) => {
+          dt.append('code');
+          dt.append('small');
+        });
         div.append('dd');
       }),
     );
 
   filesContainer.select('dt code').text((d) => d.name);
-  filesContainer.select('dt small').text((d) => `${d.lines.length} lines`);
+  filesContainer.select('dt small').text(
+    (d) => `${d3.sum(d.lines, (line) => line.lines)} lines`,
+  );
   filesContainer
     .select('dd')
     .selectAll('div.loc')
-    .data((d) => d.lines)
+    .data((d) => d.lines.flatMap((line) => d3.range(line.lines).map(() => line)))
     .join('div')
     .attr('class', 'loc')
     .attr('style', (d) => `--color: ${colors(d.type)}`)
