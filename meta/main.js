@@ -106,9 +106,14 @@ function renderLanguageBreakdown(selection, visibleCommits) {
     ? visibleCommits.filter((commit) => isCommitSelected(selection, commit, xScale, yScale))
     : [];
   const container = document.getElementById('language-breakdown');
+  const section = document.getElementById('language-section');
   container.innerHTML = '';
 
-  if (!selected.length) return;
+  if (!selected.length) {
+    section.hidden = true;
+    return;
+  }
+  section.hidden = false;
   const lines = selected.flatMap((commit) => commit.lines);
   const breakdown = d3.rollup(lines, (values) => values.length, (line) => line.type);
 
@@ -225,6 +230,13 @@ function updateScatterPlot(data, visibleCommits) {
 
 function updateFileDisplay(visibleCommits) {
   const lines = visibleCommits.flatMap((commit) => commit.lines);
+  const section = document.getElementById('files-section');
+  if (!lines.length) {
+    section.hidden = true;
+    d3.select('#files').selectAll(':scope > div').remove();
+    return;
+  }
+  section.hidden = false;
   const files = d3
     .groups(lines, (d) => d.file)
     .map(([name, fileLines]) => ({ name, lines: fileLines }))
@@ -261,6 +273,7 @@ function updateFileDisplay(visibleCommits) {
 function onTimeSliderChange() {
   const slider = document.getElementById('commit-progress');
   commitProgress = Number(slider.value);
+  slider.style.setProperty('--progress', `${commitProgress}%`);
   commitMaxTime = timeScale.invert(commitProgress);
   document.getElementById('commit-time').textContent =
     commitMaxTime.toLocaleString('en', { dateStyle: 'long', timeStyle: 'short' });
